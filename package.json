@@ -4,13 +4,43 @@
   "description": "GPT-Vis 可视化图表生成 MCP 服务",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "gpt-vis-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "visualization",
+    "charts",
+    "gpt-vis",
+    "data-visualization",
+    "ai-tools"
+  ],
+  "author": "BoyYangzai <boyyangzai@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BoyYangzai/gpt-vis-mcp.git"
+  },
+  "homepage": "https://github.com/BoyYangzai/gpt-vis-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/BoyYangzai/gpt-vis-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "test": "npm run build && node test/run-all-tests.js",
     "test:unit": "npm run build && node test/quick-test.js",
     "test:integration": "npm run build && node test/comprehensive-test.js",
     "start": "node dist/index.js",
-    "dev": "node --import=tsx/esm src/index.ts"
+    "dev": "node --import=tsx/esm src/index.ts",
+    "verify": "node scripts/verify-install.js",
+    "publish:manual": "bash scripts/publish.sh",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",

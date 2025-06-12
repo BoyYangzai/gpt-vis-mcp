@@ -1,0 +1,26 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+.env
+.nyc_output
+coverage
+.nyc_output
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# 源代码文件（只需要构建后的dist目录）
+src
+test
+*.ts
+tsconfig.json
+
+# 开发相关文件
+.github
+PUBLISH.md 
